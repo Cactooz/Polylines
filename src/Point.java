@@ -9,4 +9,9 @@ public class Point {
 		coordX = x;
 		coordY = y;
 	}
+	
+	//Get the name of the point
+	public String getName() {
+		return name;
+	}
 }
