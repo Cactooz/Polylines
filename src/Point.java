@@ -14,4 +14,9 @@ public class Point {
 	public String getName() {
 		return name;
 	}
+	
+	//Get the X coordinate of the point
+	public float getCoordX() {
+		return coordX;
+	}
 }
