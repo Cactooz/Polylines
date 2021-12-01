@@ -19,4 +19,9 @@ public class Point {
 	public float getCoordX() {
 		return coordX;
 	}
+	
+	//Get the Y coordinate of the point
+	public float getCoordY() {
+		return coordY;
+	}
 }
