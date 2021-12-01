@@ -34,4 +34,9 @@ public class Point {
 	public void setCoordX(float x) {
 		coordX = x;
 	}
+	
+	//Set the Y coordinate of the point
+	public void setCoordY(float y) {
+		coordY = y;
+	}
 }
