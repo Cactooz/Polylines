@@ -24,4 +24,9 @@ public class Point {
 	public float getCoordY() {
 		return coordY;
 	}
+	
+	//Set the name of the point
+	public void setName(String n) {
+		name = n;
+	}
 }
