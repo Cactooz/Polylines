@@ -1,0 +1,12 @@
+public class Point {
+	
+	String name;
+	float coordX, coordY;
+	
+	//Constructor for points, taking the name and x,y coords
+	public void point(String n, float x, float y) {
+		name = n;
+		coordX = x;
+		coordY = y;
+	}
+}
