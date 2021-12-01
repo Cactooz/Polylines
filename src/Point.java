@@ -29,4 +29,9 @@ public class Point {
 	public void setName(String n) {
 		name = n;
 	}
+	
+	//Set the X coordinate of the point
+	public void setCoordX(float x) {
+		coordX = x;
+	}
 }
