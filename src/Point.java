@@ -39,4 +39,14 @@ public class Point {
 	public void setCoordY(int y) {
 		coordY = y;
 	}
+	
+	public float distance(Point p2) {
+		int p2X = p2.getCoordX();
+		int p2Y = p2.getCoordY();
+		
+		int differenceX = this.coordX - p2X;
+		int differenceY = this.coordY - p2Y;
+		
+		return (float) Math.sqrt(differenceX * differenceX + differenceY * differenceY);
+	}
 }
