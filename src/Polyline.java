@@ -13,4 +13,9 @@ public class Polyline {
 			points[i] = new Point(points[i]);
 		}
 	}
+	
+	public Point[] getPoints() {
+		return points;
+	}
+	
 }
