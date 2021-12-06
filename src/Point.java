@@ -10,9 +10,11 @@ public class Point {
 		coordY = y;
 	}
 	
-	//Constructor for points, only taking the name
-	public Point(String n) {
-		name = n;
+	//Constructor for points, taking another point object
+	public Point(Point point) {
+		name = point.name;
+		coordX = point.coordX;
+		coordY = point.coordY;
 	}
 	
 	//Get the name of the point
