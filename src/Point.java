@@ -1,10 +1,10 @@
 public class Point {
 	
 	String name;
-	float coordX, coordY;
+	int coordX, coordY;
 	
 	//Constructor for points, taking the name and x,y coords
-	public void point(String n, float x, float y) {
+	public void point(String n, int x, int y) {
 		name = n;
 		coordX = x;
 		coordY = y;
@@ -16,12 +16,12 @@ public class Point {
 	}
 	
 	//Get the X coordinate of the point
-	public float getCoordX() {
+	public int getCoordX() {
 		return coordX;
 	}
 	
 	//Get the Y coordinate of the point
-	public float getCoordY() {
+	public int getCoordY() {
 		return coordY;
 	}
 	
@@ -31,12 +31,12 @@ public class Point {
 	}
 	
 	//Set the X coordinate of the point
-	public void setCoordX(float x) {
+	public void setCoordX(int x) {
 		coordX = x;
 	}
 	
 	//Set the Y coordinate of the point
-	public void setCoordY(float y) {
+	public void setCoordY(int y) {
 		coordY = y;
 	}
 }
