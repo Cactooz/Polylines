@@ -22,4 +22,8 @@ public class Polyline {
 		return color;
 	}
 	
+	public int getWidth() {
+		return width;
+	}
+	
 }
