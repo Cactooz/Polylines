@@ -18,4 +18,8 @@ public class Polyline {
 		return points;
 	}
 	
+	public String getColor() {
+		return color;
+	}
+	
 }
