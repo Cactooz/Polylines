@@ -26,4 +26,8 @@ public class Polyline {
 		return width;
 	}
 	
+	public void setColor(String newColor) {
+		color = newColor;
+	}
+	
 }
