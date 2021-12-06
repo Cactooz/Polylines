@@ -34,10 +34,12 @@ public class Polyline {
 		width = newWidth;
 	}
 	
+	//Get the length of the polyline
 	public float length() {
-		
+		//Set the start length to 0
 		float length = 0;
 		
+		//Add the length between the point to the next point into the total length
 		for(int i = 0; i < points.length-1; i++) {
 			length += points[i].distance(points[i+1]);
 		}
