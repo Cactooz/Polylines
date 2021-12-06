@@ -30,4 +30,8 @@ public class Polyline {
 		color = newColor;
 	}
 	
+	public void setWidth(int newWidth) {
+		width = newWidth;
+	}
+	
 }
