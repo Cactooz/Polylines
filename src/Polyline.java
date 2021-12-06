@@ -34,4 +34,15 @@ public class Polyline {
 		width = newWidth;
 	}
 	
+	public float length() {
+		
+		float length = 0;
+		
+		for(int i = 0; i < points.length-1; i++) {
+			length += points[i].distance(points[i+1]);
+		}
+		
+		return length;
+	}
+	
 }
