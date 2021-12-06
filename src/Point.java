@@ -4,7 +4,7 @@ public class Point {
 	int coordX, coordY;
 	
 	//Constructor for points, taking the name and x,y coords
-	public void point(String n, int x, int y) {
+	public Point(String n, int x, int y) {
 		name = n;
 		coordX = x;
 		coordY = y;
