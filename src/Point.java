@@ -45,10 +45,13 @@ public class Point {
 		coordY = y;
 	}
 	
+	//Get the distance between two points
 	public float distance(Point p2) {
+		//Get the other points coords
 		int p2X = p2.getCoordX();
 		int p2Y = p2.getCoordY();
 		
+		//Get the X & Y differences
 		int differenceX = this.coordX - p2X;
 		int differenceY = this.coordY - p2Y;
 		
