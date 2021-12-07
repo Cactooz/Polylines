@@ -47,4 +47,19 @@ public class Polyline {
 		return length;
 	}
 	
+	//Add a point to the end of the array
+	public void addPoint(Point newPoint) {
+		//Set a temporary array that is bigger
+		Point[] tempPoints = new Point[points.length+1];
+		
+		//Add the old points to the array
+		for(int i = 0; i < points.length; i++) {
+			tempPoints[i] = points[i];
+		}
+		//Add the new point at the end of the array
+		tempPoints[tempPoints.length - 1] = newPoint;
+		
+		points = tempPoints;
+	}
+	
 }
