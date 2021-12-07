@@ -78,4 +78,18 @@ public class Polyline {
 		points = tempPoints;
 	}
 	
+	//Remove a point defined by its frame from the array
+	public void remove(String pointName) {
+		//Set a temporary array that is smaller
+		Point[] tempPoints = new Point[points.length-1];
+		
+		//Add all points to the array except the one with the defined name to remove
+		for(int i = 1; i < tempPoints.length; i++) {
+			if(points[i].getName() != pointName)
+				tempPoints[i] = points[i];
+		}
+		
+		points = tempPoints;
+	}
+	
 }
