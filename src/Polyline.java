@@ -99,4 +99,11 @@ public class Polyline {
 		points = tempPoints;
 	}
 	
+	public String toString() {
+		if(points[0] == null) {
+			return "Error: No points found";
+		}
+		return "(" + points.toString() + ", " + color + ", " + width + ")";
+	}
+	
 }
