@@ -78,7 +78,7 @@ public class Polyline {
 		tempPoints[0] = newPoint;
 		
 		//Add the old points to the array
-		for(int i = 1; i < tempPoints.length; i++) {
+		for(int i = 1; i < tempPoints.length-1; i++) {
 			tempPoints[i] = points[i];
 		}
 		
