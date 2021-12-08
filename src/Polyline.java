@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Polyline {
 	private Point[] points;
 	private String color = "black";
@@ -103,7 +105,7 @@ public class Polyline {
 		if(points[0] == null) {
 			return "Error: No points found";
 		}
-		return "(" + points.toString() + ", " + color + ", " + width + ")";
+		return "(" + Arrays.toString(this.points) + ", " + color + ", " + width + ")";
 	}
 	
 }
