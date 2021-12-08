@@ -15,7 +15,14 @@ public class Polyline {
 	}
 	
 	public Point[] getPoints() {
-		return points;
+		Point[] getPoints = new Point[points.length];
+		
+		//Add all elements into the new array
+		for(int i = 0; i < getPoints.length; i++) {
+			getPoints[i] = points[i];
+		}
+		
+		return getPoints;
 	}
 	
 	public String getColor() {
