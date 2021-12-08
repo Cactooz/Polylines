@@ -59,4 +59,8 @@ public class Point {
 		
 		return (float) Math.sqrt(differenceX * differenceX + differenceY * differenceY);
 	}
+	
+	public String toString() {
+		return "(" + name + ", " + coordX + ", " + coordY;
+	}
 }
