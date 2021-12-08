@@ -61,6 +61,6 @@ public class Point {
 	}
 	
 	public String toString() {
-		return "(" + name + ", " + coordX + ", " + coordY;
+		return "(" + name + ", " + coordX + ", " + coordY + ")";
 	}
 }
