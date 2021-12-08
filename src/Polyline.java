@@ -8,9 +8,9 @@ public class Polyline {
 	}
 	
 	public Polyline(Point[] points) {
-		points = new Point[points.length];
+		this.points = new Point[points.length];
 		for(int i = 0; i < points.length; i++) {
-			points[i] = new Point(points[i]);
+			this.points[i] = new Point(points[i]);
 		}
 	}
 	
