@@ -92,10 +92,20 @@ public class Polyline {
 		//Set a temporary array that is smaller
 		Point[] tempPoints = new Point[points.length-1];
 		
-		//Add all points to the array except the one with the defined name to remove
-		for(int i = 1; i < tempPoints.length; i++) {
-			if(points[i].getName() != pointName)
+		int item = 0;
+		
+		//Add all points to the array up to the point with the defined name
+		for(int i = 0; i < tempPoints.length; i++) {
+			if(points[i].getName() != pointName) {
 				tempPoints[i] = points[i];
+				item++;
+			}
+			else
+				break;
+		}
+		//Add the remaining items after the defined point
+		for(int j = item; j < tempPoints.length; j++) {
+			tempPoints[j] = points[j+1];
 		}
 		
 		points = tempPoints;
