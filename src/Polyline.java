@@ -1,3 +1,4 @@
+import javax.print.attribute.standard.MediaSize;
 import java.util.Arrays;
 
 public class Polyline {
@@ -89,23 +90,27 @@ public class Polyline {
 	
 	//Remove a point defined by its frame from the array
 	public void remove(String pointName) {
+		
+		int removePos = -1;
+		for(int i = 0; i < points.length; i++) {
+			if(points[i].getName() == pointName) {
+				removePos = i;
+				break;
+			}
+		}
+		if(removePos == -1)
+			throw new IllegalArgumentException(pointName + " is not a point in the polyline");
+		
 		//Set a temporary array that is smaller
 		Point[] tempPoints = new Point[points.length-1];
 		
-		int item = 0;
-		
 		//Add all points to the array up to the point with the defined name
-		for(int i = 0; i < tempPoints.length; i++) {
-			if(points[i].getName() != pointName) {
+		for(int i = 0; i < removePos; i++) {
 				tempPoints[i] = points[i];
-				item++;
-			}
-			else
-				break;
 		}
 		//Add the remaining items after the defined point
-		for(int j = item; j < tempPoints.length; j++) {
-			tempPoints[j] = points[j+1];
+		for(int i = removePos; i < tempPoints.length; i++) {
+			tempPoints[i] = points[i+1];
 		}
 		
 		points = tempPoints;
