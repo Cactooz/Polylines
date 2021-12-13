@@ -72,6 +72,34 @@ public class Polyline {
 		points = tempPoints;
 	}
 	
+	//Add a point before a point specified by its name
+	public void addPoint(Point newPoint, String pointName) {
+		//Set a temporary array that is bigger
+		Point[] tempPoints = new Point[points.length+1];
+		
+		int pos = 0;
+		
+		//Add all the points upto the point specified by its name
+		for(int i = 0; i < points.length; i++) {
+			if(points[i].getName() != pointName) {
+				tempPoints[i] = points[i];
+				pos++;
+			}
+			else
+				break;
+		}
+		
+		//Add the new point before the point with the defined name
+		tempPoints[pos] = newPoint;
+		
+		//Add the remaining points to the end of the array
+		for(int i = pos; i < points.length; i++) {
+			tempPoints[i+1] = points[i];
+		}
+		
+		points = tempPoints;
+	}
+	
 	//Add a point to the start of the array
 	public void addPointStart(Point newPoint) {
 		//Set a temporary array that is bigger
