@@ -43,5 +43,7 @@ public class Main {
 		System.out.println(poly1.toString());
 		poly1.remove("D");
 		System.out.println(poly1.toString());
+		poly1.addPoint(p10, "B");
+		System.out.println(poly1.toString());
 	}
 }
