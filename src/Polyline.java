@@ -115,7 +115,7 @@ public class Polyline {
 		if(points[0] == null) {
 			return "Error: No points found";
 		}
-		return "(" + Arrays.toString(this.points) + ", " + color + ", " + width + ")";
+		return "{" + Arrays.toString(this.points) + ", " + color + ", " + width + "}";
 	}
 	
 }
