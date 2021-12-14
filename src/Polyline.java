@@ -80,13 +80,9 @@ public class Polyline {
 		int pos = 0;
 		
 		//Add all the points upto the point specified by its name
-		for(int i = 0; i < points.length; i++) {
-			if(points[i].getName() != pointName) {
-				tempPoints[i] = points[i];
-				pos++;
-			}
-			else
-				break;
+		while(points[pos].getName() != pointName) {
+			tempPoints[pos] = points[pos];
+			pos++;
 		}
 		
 		//Add the new point before the point with the defined name
