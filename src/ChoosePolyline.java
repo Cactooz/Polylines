@@ -14,6 +14,7 @@ public class ChoosePolyline {
 		
 		//Set thee shortestPath to infinity
 		float shortestPath = Float.POSITIVE_INFINITY;
+		//Variable keeping track of the shortest path
 		int path = -1;
 		
 		//Get the shortest yellow polyline
@@ -26,6 +27,7 @@ public class ChoosePolyline {
 			}
 		}
 		
+		//Check if there is any yellow polylines at all
 		if(path == -1)
 			System.out.println("No yellow path could be found");
 		else
@@ -44,9 +46,11 @@ public class ChoosePolyline {
 		return new Point(name, x, y);
 	}
 	
+	//Create a polyline with random points and color
 	private static Polyline randomPolyline() {
 		Polyline polyline = new Polyline();
 		
+		//Get a random amount of points
 		int totalPoints = 2 + random.nextInt(8);
 		boolean[] chosenNames = new boolean[26];
 		Point chosenPoint = null;
@@ -65,6 +69,7 @@ public class ChoosePolyline {
 			}
 		}
 		
+		//Get a random color for the polyline
 		String color = "";
 		int colorOption = random.nextInt(3);
 		switch(colorOption) {
