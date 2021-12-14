@@ -19,8 +19,8 @@ public class ChoosePolyline {
 		String name = "" + (char) (65 + random.nextInt(26));
 		
 		//Give the point random coordinates
-		int x = random.nextInt(20);
-		int y = random.nextInt(20);
+		int x = random.nextInt(11);
+		int y = random.nextInt(11);
 		
 		return new Point(name, x, y);
 	}
