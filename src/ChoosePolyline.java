@@ -40,9 +40,9 @@ public class ChoosePolyline {
 			chosenChar = chosenPoint.getName().charAt(0);
 			
 			//Only add the point if the name hasn't been used before
-			if(!chosenNames[65 - chosenChar]) {
+			if(!chosenNames[chosenChar - 65]) {
 				polyline.addPoint(chosenPoint);
-				chosenNames[65 - chosenChar] = true;
+				chosenNames[chosenChar - 65] = true;
 			}
 		}
 		
