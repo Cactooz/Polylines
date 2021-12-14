@@ -2,9 +2,15 @@ import java.util.Random;
 
 public class ChoosePolyline {
 	static final Random random = new Random();
+	static final int polylineAmount = 10;
 	
 	public static void main(String[] args) {
-	
+		Polyline[] polylines = new Polyline[polylineAmount];
+		
+		//Fill the array with polylines
+		for(int i = 0; i < polylineAmount; i++) {
+			polylines[i] = randomPolyline();
+		}
 	}
 	
 	//Create a random point
