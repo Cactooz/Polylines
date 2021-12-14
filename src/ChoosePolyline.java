@@ -34,8 +34,19 @@ public class ChoosePolyline {
 		char chosenChar = 0;
 		
 		for(int i = 0; i < totalPoints; i++) {
+			//Create a new randomized point
 			chosenPoint = randomPoint();
+			//Get the name of the point
+			chosenChar = chosenPoint.getName().charAt(0);
+			
+			//Only add the point if the name hasn't been used before
+			if(!chosenNames[65 - chosenChar]) {
+				polyline.addPoint(chosenPoint);
+				chosenNames[65 - chosenChar] = true;
+			}
 		}
+		
+		
 		
 		return polyline;
 	}
