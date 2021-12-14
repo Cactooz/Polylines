@@ -11,6 +11,25 @@ public class ChoosePolyline {
 		for(int i = 0; i < polylineAmount; i++) {
 			polylines[i] = randomPolyline();
 		}
+		
+		//Set thee shortestPath to infinity
+		float shortestPath = Float.POSITIVE_INFINITY;
+		int path = -1;
+		
+		//Get the shortest yellow polyline
+		for(int i = 0; i < polylineAmount; i++) {
+			if(polylines[i].getColor() == "yellow") {
+				if(polylines[i].length() < shortestPath) {
+					shortestPath = polylines[i].length();
+					path = i;
+				}
+			}
+		}
+		
+		if(path == -1)
+			System.out.println("No yellow path could be found");
+		else
+			System.out.println(polylines[path].toString());
 	}
 	
 	//Create a random point
