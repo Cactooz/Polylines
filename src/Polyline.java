@@ -1,4 +1,3 @@
-import javax.print.attribute.standard.MediaSize;
 import java.util.Arrays;
 
 public class Polyline {
@@ -147,4 +146,42 @@ public class Polyline {
 		return "{" + Arrays.toString(this.points) + ", " + color + ", " + width + "}";
 	}
 	
+	public class PolylineIterator {
+		private int current = -1;
+		
+		public PolylineIterator()
+		{
+			if (Polyline.this.points.length > 0)
+				current = 0;
+		}
+		
+		public boolean pointsCheck()
+		{
+			return current != -1;
+		}
+		
+		public Point point() throws java.util.NoSuchElementException
+		{
+			if (!this.pointsCheck())
+				throw new java.util.NoSuchElementException ("End of iteration");
+			
+			return Polyline.this.points[current];
+		}
+		
+		public void forward()
+		{
+			if (current >= 0 && current < Polyline.this.points.length - 1)
+				current++;
+			else
+				current = -1;
+		}
+		
+		public void printPunkt(){
+			while(this.pointsCheck()){
+				Point tempPoint = point();
+				System.out.println(tempPoint);
+				forward();
+			}
+		}
+	}
 }
