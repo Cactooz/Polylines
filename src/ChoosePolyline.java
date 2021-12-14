@@ -18,4 +18,19 @@ public class ChoosePolyline {
 		
 		return new Point(name, x, y);
 	}
+	
+	private static Polyline randomPolyline() {
+		Polyline polyline = new Polyline();
+		
+		int totalPoints = 2 + random.nextInt(8);
+		boolean[] chosenNames = new boolean[26];
+		Point chosenPoint = null;
+		char chosenChar = 0;
+		
+		for(int i = 0; i < totalPoints; i++) {
+			chosenPoint = randomPoint();
+		}
+		
+		return polyline;
+	}
 }
