@@ -46,7 +46,14 @@ public class ChoosePolyline {
 			}
 		}
 		
-		
+		String color = "";
+		int colorOption = random.nextInt(3);
+		switch(colorOption) {
+			case 0 -> color = "blue";
+			case 1 -> color = "red";
+			case 2 -> color = "yellow";
+		}
+		polyline.setColor(color);
 		
 		return polyline;
 	}
