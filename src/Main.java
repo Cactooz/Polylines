@@ -45,5 +45,8 @@ public class Main {
 		System.out.println(poly1.toString());
 		poly1.addPoint(p10, "B");
 		System.out.println(poly1.toString());
+		
+		Polyline.PolylineIterator it = poly1.new PolylineIterator();
+		it.printPunkt();
 	}
 }
